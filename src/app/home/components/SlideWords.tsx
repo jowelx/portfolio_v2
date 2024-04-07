@@ -82,7 +82,7 @@ const SlideWords = () => {
                       style={{ fontWeight: 700, }}
 
 
-                      sx={{ textAlign: { xs: 'center', lg: 'left' }, fontSize: { xs: 50, sm: 100, md: 120 } }}
+                      sx={{ textAlign: { xs: 'center', lg: 'left' }, fontSize: { xs: 50, sm: 100, md: 100 } }}
                     >{letter}</Typography>
                     </motion.div>
                   ))}

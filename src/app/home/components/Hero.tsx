@@ -36,11 +36,11 @@ const Hero: NextPage<Props> = ({ }) => {
         rowSpacing={{ xs: 5, lg: 0 }}
     >
         <Item xs={11} lg={8}>
-            <TittleStatic sx={{ textAlign: { xs: 'center', lg: 'left' }, fontSize: { xs: 40, sm: 100, md: 120 } }}>
+            <TittleStatic sx={{ textAlign: { xs: 'center', lg: 'left' }, fontSize: { xs: 40, sm: 100, md: 100 } }}>
                 I´m a
             </TittleStatic>
             <SlideWords />
-            <TittleStatic sx={{ textAlign: { xs: 'center', lg: 'left' }, fontSize: { xs: 40, sm: 100, md: 120 } }}>
+            <TittleStatic sx={{ textAlign: { xs: 'center', lg: 'left' }, fontSize: { xs: 40, sm: 100, md: 100 } }}>
                 Developer
             </TittleStatic>
             <Text sx={{
