@@ -31,7 +31,10 @@ const Hero: NextPage<Props> = ({ }) => {
 
         return () => clearInterval(intervel);
     }, [op])
-    return <Container justifyContent={{ xs: 'center', lg: 'space-between' }} rowSpacing={{ xs: 5, lg: 0 }}>
+    return <Container
+        justifyContent={{ xs: 'center', lg: 'space-between' }}
+        rowSpacing={{ xs: 5, lg: 0 }}
+    >
         <Item xs={11} lg={8}>
             <TittleStatic sx={{ textAlign: { xs: 'center', lg: 'left' }, fontSize: { xs: 40, sm: 100, md: 120 } }}>
                 I´m a
@@ -70,7 +73,7 @@ const Hero: NextPage<Props> = ({ }) => {
 
         </Item>
         <Item xs={12} lg={4} style={{ display: 'flex', justifyContent: 'flex-end' }}>
-            <div style={{ width: '100%' }}>
+            <div style={{ width: '100%', }}>
                 <Container columnSpacing={{ xs: 0, sm: 1, md: 0 }} justifyContent={{ xs: 'center', md: 'space-around', lg: 'space-between' }} sx={{ marginBottom: { xs: '4vh', lg: 0 } }}>
                     <Item xs={11} sm={6} md={5} lg={12}
                         sx={{

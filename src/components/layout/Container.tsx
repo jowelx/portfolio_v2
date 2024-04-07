@@ -44,7 +44,7 @@ export const ContentContainer: FC<ContainerProps> = ({ children, ...props }) => 
 
 export const Container: FC<ContainerProps> = ({ children, ...props }) => {
 
-    return (<Grid item {...props}>
+    return (<Grid container {...props}>
         {children}
     </Grid>
     )
