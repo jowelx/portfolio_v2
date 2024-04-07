@@ -13,7 +13,7 @@ export interface ContainerProps {
 
     direction?: GridDirection | undefined;
     children: ReactNode;
-    justifyContent?: string | {
+    justifyContent?: string | any | {
         xs?: number | string;
         md?: number | string;
         lg?: number | string;
@@ -44,6 +44,16 @@ export interface ContainerProps {
         xl?: number;
         sm?: number;
     }
+
+
+
+    onClick?: any;
+
+    xs?: number;
+    md?: number;
+    lg?: number;
+    xl?: number;
+    sm?: number;
 }
 export interface ItemProps {
     onClick?: any;
