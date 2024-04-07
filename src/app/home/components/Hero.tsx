@@ -74,7 +74,12 @@ const Hero: NextPage<Props> = ({ }) => {
         </Item>
         <Item xs={12} lg={4} style={{ display: 'flex', justifyContent: 'flex-end' }}>
             <div style={{ width: '100%', }}>
-                <Container columnSpacing={{ xs: 0, sm: 1, md: 0 }} justifyContent={{ xs: 'center', md: 'space-around', lg: 'space-between' }} sx={{ marginBottom: { xs: '4vh', lg: 0 } }}>
+                <Container
+                    alignItems="space-between"
+                    style={{ height: '100%' }}
+                    columnSpacing={{ xs: 0, sm: 1, md: 0 }}
+                    justifyContent={{ xs: 'center', md: 'space-around', lg: 'space-between' }}
+                    sx={{ marginBottom: { xs: '4vh', lg: 0 } }}>
                     <Item xs={11} sm={6} md={5} lg={12}
                         sx={{
                             display: 'flex',
