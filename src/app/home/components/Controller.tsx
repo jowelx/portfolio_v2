@@ -23,7 +23,7 @@ const Controller: NextPage<Props> = ({ setState }) => {
             bottom: 0,
             display: 'flex',
             alignItems: 'center',
-            left: 0,
+            left: 10,
         }}>
             <div style={{
                 position: 'relative',
@@ -60,7 +60,7 @@ const Controller: NextPage<Props> = ({ setState }) => {
             bottom: 0,
             display: 'flex',
             alignItems: 'center',
-            right: 0,
+            right: 10,
         }}>     <div style={{
             position: 'relative',
             height: 200,
