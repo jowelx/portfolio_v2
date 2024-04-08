@@ -62,7 +62,7 @@ const Proyects: NextPage<Props> = ({ step }) => {
         <br />
         {showCard ? <Container rowSpacing={4} style={{ overflowX: 'none' }}>
             {dataCode.map((item, index) => (
-                <Item xs={3}>
+                <Item xs={3} key={item.tittle}>
                     <motion.div
                         initial={{ opacity: 0.5, x: step ? -1200 : 1200, }}
                         animate={{ opacity: 1, x: 0, }}
