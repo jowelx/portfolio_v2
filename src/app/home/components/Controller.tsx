@@ -2,7 +2,8 @@ import { NextPage } from 'next'
 import Image from 'next/image'
 import styled from "@emotion/styled";
 import React, { SetStateAction } from 'react';
-interface Props { setState: React.Dispatch<SetStateAction<number>> }
+import { motion } from 'framer-motion'
+interface Props { step: number, setState: React.Dispatch<SetStateAction<number>>, setLastStep: React.Dispatch<SetStateAction<number>> }
 const borderWidth = 1
 const Color = "rgb(205, 250, 125)"
 const Ray = styled.div({
@@ -14,7 +15,7 @@ const Ray = styled.div({
     background: `linear-gradient(0deg, rgba(0,0,0,0) 0%,${Color}  50%, rgba(0,0,0,0) 100%)`
 })
 
-const Controller: NextPage<Props> = ({ setState }) => {
+const Controller: NextPage<Props> = ({ setState, setLastStep, step }) => {
     return <>
         <div style={{
             zIndex: 99,
@@ -25,16 +26,27 @@ const Controller: NextPage<Props> = ({ setState }) => {
             alignItems: 'center',
             left: 10,
         }}>
-            <div style={{
-                position: 'relative',
-                height: 200,
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center'
-            }}>
+            <motion.div
+                initial="initial"
+                animate={{ opacity: step === 0 ? 0.2 : 1, }}
+                transition={{
+
+                    duration: 0.2,
+
+                }}
+                style={{
+
+                    opacity: step === 0 ? 0.4 : 1,
+                    position: 'relative',
+                    height: 200,
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center'
+                }}>
                 <Ray />
                 <div style={{
-                    cursor: 'pointer',
+
+                    cursor: step === 0 ? 'auto' : 'pointer',
                     rotate: '180deg',
                     backgroundColor: 'rgb(55,55,55)',
                     justifyContent: 'center',
@@ -45,13 +57,13 @@ const Controller: NextPage<Props> = ({ setState }) => {
                     height: 40,
                     borderRadius: 200
                 }}
-                    onClick={() => setState((prev: number) => prev === 0 ? 0 : prev + 1)}
+                    onClick={() => { setLastStep(step); setState((prev: number) => prev === 0 ? 0 : prev + 1) }}
                 >
 
                     <Image alt="" src={'/assets/arrow.svg'} width={25} height={25} />
 
                 </div>
-            </div>
+            </motion.div>
         </div>
         <div style={{
             zIndex: 99,
@@ -61,16 +73,25 @@ const Controller: NextPage<Props> = ({ setState }) => {
             display: 'flex',
             alignItems: 'center',
             right: 10,
-        }}>     <div style={{
-            position: 'relative',
-            height: 200,
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center'
         }}>
+            <motion.div
+                initial="initial"
+                animate={{ opacity: step === -1 ? 0.2 : 1, }}
+                transition={{
+
+                    duration: 0.2,
+
+                }}
+                style={{
+                    position: 'relative',
+                    height: 200,
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center'
+                }}>
 
                 <div style={{
-                    cursor: 'pointer',
+                    cursor: step === -1 ? 'auto' : 'pointer',
                     backgroundColor: 'rgb(55,55,55)',
                     justifyContent: 'center',
                     display: 'flex',
@@ -81,14 +102,14 @@ const Controller: NextPage<Props> = ({ setState }) => {
                     height: 40,
                     borderRadius: 200
                 }}
-                    onClick={() => setState((prev: number) => prev - 1)}
+                    onClick={() => { setLastStep(step); setState((prev: number) => prev === 1 ? 1 : - 1) }}
                 >
 
                     <Image alt="" src={'/assets/arrow.svg'} width={25} height={25} />
 
                 </div>
                 <Ray />
-            </div>
+            </motion.div>
         </div>
     </>
 

@@ -1,7 +1,7 @@
 const React = "rgb(10,180,250)";
 const TypeScrip = "rgb(50,0,240)";
 const Expo = "rgb(255,255,255)";
-const Node = "rgb(50,255,100)";
+const Node = "rgb(50,180,100)";
 const Three = "rgb(60,60,60)";
 const Web3 = "rgb(255,150,25)";
 const Next = "rgb(180,180,180)";
@@ -37,7 +37,7 @@ export const dataCode = [
     rol: "Full Stack",
     img: "https://res.cloudinary.com/dfaaqkh9d/image/upload/v1683773043/sirgurgeir_1_25x_bzfej7.png",
     tittle: "Sirgurgeir",
-    link: "https://sirgurgeir-react.vercel.app/",
+    link: "https://www.thatslifestudio.com/",
     description:
       "Es un comercio electronico que permite a las personas poder comprar en linea",
     tecnologies: [
@@ -50,7 +50,7 @@ export const dataCode = [
     rol: "Frontend",
     img: "https://res.cloudinary.com/dfaaqkh9d/image/upload/v1683774711/artis_1_25x_nzqcrx.png",
     tittle: "Artis",
-    link: "https://artis-iq-develop.vercel.app/",
+    link: "https://www.artisiq.com/",
     description:
       "Es una web interactiva que permite visualizar el negocio  de artis una empresa que comercializa con canabis, mostrando los beneficios de su producto ",
     tecnologies: [

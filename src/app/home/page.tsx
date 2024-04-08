@@ -10,6 +10,7 @@ import { useEffect, useState } from 'react';
 import Hero from './components/Hero';
 import Controller from './components/Controller';
 import { Box } from '@mui/material';
+import Proyects from './components/Proyects';
 
 const Grid = styled(motion.div)({
     position: 'relative',
@@ -25,33 +26,34 @@ interface Props { }
 
 const Home: NextPage<Props> = ({ }) => {
     const [step, setStep] = useState(0)
-    const [hideHero, setHideHero] = useState(false)
+    const [lastStep, setLastStep] = useState(0)
+    const [hideHero, setHideHero] = useState(false);
+    const [hideProyects, setHideProyects] = useState(false);
     useEffect(() => {
 
         if (step === -1) {
             const intervalId = setTimeout(() => {
-
                 setHideHero(true)
-
-
+                setHideProyects(false)
             }, 500);
             return () => clearInterval(intervalId);
         } else if (step === 0) {
             const intervalId = setTimeout(() => {
-
                 setHideHero(false)
-
-
+                setHideProyects(true)
             }, 800);
             return () => clearInterval(intervalId);
         }
-
-
-
+        if (step !== -1) {
+            const intervalId = setTimeout(() => {
+                setHideProyects(true)
+            }, 800);
+            return () => clearInterval(intervalId);
+        }
     }, [step])
     return <div style={{ position: 'relative' }}>
         <Box sx={{ display: { xs: 'none', lg: 'block' } }}>
-            <Controller setState={setStep} />
+            <Controller setState={setStep} setLastStep={setLastStep} step={step} />
         </Box>
 
         <Box sx={{ width: { xs: '100%', lg: '1000vw' }, height: { xs: 'auto', lg: '100vh' } }}>
@@ -83,9 +85,30 @@ const Home: NextPage<Props> = ({ }) => {
                             </motion.div>
 
                             : null}
+
                     </Wrapper>
                 </div>
 
+                <div style={{ width: '100vw' }}>
+                    <Wrapper>
+
+                        {!hideProyects ? <motion.div
+                            initial={{ opacity: 0, }}
+                            animate={{ opacity: 1, }}
+                            transition={{
+                                ease: 'easeInOut',
+                                duration: 0.5,
+
+                            }}
+                            style={{ display: 'flex', justifyContent: 'center' }}
+                        >
+                            <Proyects step={lastStep} />
+                        </motion.div> : null}
+
+
+
+                    </Wrapper>
+                </div>
 
             </Grid>
         </Box>

@@ -72,3 +72,39 @@ body {
   background-color: rgb(30, 30, 30);
   color: white
 }
+
+
+
+.scroll::-webkit-scrollbar {
+  width: 8px;
+  scroll-behavior: smooth;
+  /* Ancho de la barra de desplazamiento */
+}
+
+.scroll::-webkit-scrollbar-track {
+  background: transparent;
+  /* Color de fondo del track */
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background: #c8c8c8;
+  /* Color de la barra de desplazamiento */
+  border-radius: 4px;
+  /* Borde redondeado */
+  border: 2px solid transparent;
+  /* Borde transparente */
+}
+
+.scroll::-webkit-scrollbar-thumb:hover {
+  background: #a0a0a0;
+  /* Color de la barra de desplazamiento al pasar el mouse */
+}
+
+.scroll::-webkit-scrollbar-thumb:active {
+  background: #878787;
+  /* Color de la barra de desplazamiento al hacer clic */
+}
+
+.scroll {
+  overflow-x: hidden;
+}
