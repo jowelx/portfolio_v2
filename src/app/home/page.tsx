@@ -69,7 +69,7 @@ const Home: NextPage<Props> = ({ }) => {
                 }}
             >
 
-                <div style={{ width: '100vw' }}>
+                <div style={{ width: '100vw', }}>
                     <Wrapper>
                         {!hideHero ?
                             <motion.div
@@ -82,6 +82,26 @@ const Home: NextPage<Props> = ({ }) => {
                                 }}
                             >
                                 <Hero />
+                                <Box sx={{ display: { xs: 'block', lg: 'none' }, marginBottom: { xs: '10vw', lg: 0 } }}>
+                                    <Wrapper>
+
+                                        <motion.div
+                                            initial={{ opacity: 0, }}
+                                            animate={{ opacity: 1, }}
+                                            transition={{
+                                                ease: 'easeInOut',
+                                                duration: 0.5,
+
+                                            }}
+                                            style={{ display: 'flex', justifyContent: 'center' }}
+                                        >
+                                            <Proyects step={lastStep} />
+                                        </motion.div>
+
+
+
+                                    </Wrapper>
+                                </Box>
                             </motion.div>
 
                             : null}
@@ -89,7 +109,7 @@ const Home: NextPage<Props> = ({ }) => {
                     </Wrapper>
                 </div>
 
-                <div style={{ width: '100vw' }}>
+                <Box sx={{ display: { xs: 'none', lg: 'block' } }} style={{ width: '100vw' }}>
                     <Wrapper>
 
                         {!hideProyects ? <motion.div
@@ -108,7 +128,8 @@ const Home: NextPage<Props> = ({ }) => {
 
 
                     </Wrapper>
-                </div>
+                </Box>
+
 
             </Grid>
         </Box>

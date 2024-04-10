@@ -53,6 +53,7 @@ const Tecnologies: NextPage<Props> = ({ }) => {
         <Box sx={{ marginTop: { xs: "2vh", sm: '1vh', md: "1vh" } }}>
             <Card
                 sx={{
+
                     height: { xs: 'auto', sm: 250, lg: 320 },
                     maxWidth: { xs: 340, sm: '100%' },
                     padding: { xs: 1, md: 2 },
@@ -65,7 +66,9 @@ const Tecnologies: NextPage<Props> = ({ }) => {
                         <Divider style={{ backgroundColor: "rgb(240,240,240)" }} />
                     </Item>
                     <Item xs={12}>
-                        {show ? <div style={{ height: 270, overflow: 'auto', borderRadius: 8, position: "relative", paddingRight: 10 }}>
+                        {show ? <Box
+                            sx={{ height: { xs: 237, sm: 180, lg: 'auto' } }}
+                            style={{ overflow: 'auto', borderRadius: 8, position: "relative", paddingRight: 10 }}>
                             {TecnologiesData.map((item, index) => {
                                 return (
                                     <motion.div
@@ -115,7 +118,7 @@ const Tecnologies: NextPage<Props> = ({ }) => {
                                     </motion.div>
                                 );
                             })}
-                        </div> : null}
+                        </Box> : null}
                     </Item>
                 </Container>
             </Card >

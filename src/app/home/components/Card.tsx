@@ -9,7 +9,7 @@ import Link from 'next/link';
 const CardStyled = styled(Box)({
     overflow: 'hidden',
     borderRadius: 6,
-    maxWidth: 280,
+
     width: 'auto',
     background: ' linear-gradient(0deg, rgb(40,40,40)0%,rgb(60,60,60)100%) ',
 })
@@ -49,7 +49,10 @@ const Card: NextPage<Props> = ({ data }) => {
 
     return <div>
         <Link href={data.link} target='blank' style={{ textDecoration: 'none' }}>
-            <CardStyled onMouseEnter={() => setOnHover(true)} onMouseLeave={() => setOnHover(false)}>
+            <CardStyled
+                sx={{ maxWidth: { xs: 356, sm: 280, lg: 280 }, }}
+                onMouseEnter={() => setOnHover(true)}
+                onMouseLeave={() => setOnHover(false)}>
                 <div style={{ width: '100%', height: 110, overflow: 'hidden', display: 'flex', alignItems: 'center' }}>
                     <Image src={data.img} alt=""
                         layout='responsive'

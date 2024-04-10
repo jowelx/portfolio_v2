@@ -28,17 +28,21 @@ const Proyects: NextPage<Props> = ({ step }) => {
         };
 
     }, [])
-    return <div className='scroll'
+    return <Box className='scroll'
+        sx={{
+            height: { xs: 'auto', lg: '90vh', },
+            overflowY: { xs: 'none', lg: 'auto', }
+        }}
         style={{
             width: '95%',
-            height: '90vh',
-            overflowY: 'auto',
+
             padding: 4,
             display: 'flex',
-            flexDirection: 'column', justifyContent: 'space-between'
+            flexDirection: 'column',
+            justifyContent: 'space-between'
         }}>
-        <div style={{ display: 'flex' }}>
-            <Title>
+        <Box sx={{ display: 'flex', justifyContent: { xs: 'center', lg: 'flex-start' } }}>
+            <Title sx={{ fontSize: { xs: 50, sm: 70, lg: 100 } }}>
                 Proyectos
             </Title>
 
@@ -51,36 +55,40 @@ const Proyects: NextPage<Props> = ({ step }) => {
                     damping: 20,
                     stiffness: 200
                 }}>
-                <Title style={{ color: "rgb(255,50,125)" }}>
+                <Title sx={{ fontSize: { xs: 50, sm: 70, lg: 100 } }} style={{ color: "rgb(255,50,125)" }}>
                     .
                 </Title>
             </motion.div> : null}
-        </div>
+        </Box>
 
 
 
         <br />
-        {showCard ? <Container rowSpacing={4} style={{ overflowX: 'none' }}>
-            {dataCode.map((item, index) => (
-                <Item xs={3} key={item.tittle}>
-                    <motion.div
-                        initial={{ opacity: 0.5, x: step ? -1200 : 1200, }}
-                        animate={{ opacity: 1, x: 0, }}
-                        transition={{
-                            delay: index * 0.1,
-                            duration: 0.2,
-                            type: "spring",
-                            damping: 22,
-                            stiffness: 200
-                        }}
-                    >
-                        <Card data={item} />
-                    </motion.div>
-                </Item>
-            ))}
-        </Container> : null}
+        {showCard ?
+            <Container
+                rowSpacing={4}
+                justifyContent={{ xs: 'center', sm: 'flex-start', lg: 'flex-start' }}
+                style={{ overflowX: 'none' }}>
+                {dataCode.map((item, index) => (
+                    <Item xs={12} sm={6} lg={3} key={item.tittle} sx={{ justifyContent: { xs: 'center' } }} style={{ display: 'flex', }}>
+                        <motion.div
+                            initial={{ opacity: 0.5, x: step ? -1200 : 1200, }}
+                            animate={{ opacity: 1, x: 0, }}
+                            transition={{
+                                delay: index * 0.1,
+                                duration: 0.2,
+                                type: "spring",
+                                damping: 22,
+                                stiffness: 200
+                            }}
+                        >
+                            <Card data={item} />
+                        </motion.div>
+                    </Item>
+                ))}
+            </Container> : null}
 
-    </div>
+    </Box>
 }
 
 export default Proyects
