@@ -81,7 +81,7 @@ const Contact = () => {
               <Text sx={{
 
                 fontSize: { xs: 10, md: 16 }
-              }}>+58 4165354479</Text>
+              }}>+57 3118595200</Text>
             </Item>
             <Item xs={3} md={2} style={{ display: 'flex', justifyContent: 'center' }}>
               <LinkedInIcon style={{ color: "rgb(240,240,240)" }} />
