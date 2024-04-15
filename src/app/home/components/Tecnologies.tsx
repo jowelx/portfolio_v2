@@ -61,7 +61,7 @@ const Tecnologies: NextPage<Props> = ({ }) => {
                 }}>
                 <Container alignItems={"center"} rowSpacing={2}>
                     <Item xs={12}>
-                        <Text>Teconologias</Text>
+                        <Text>Teconologías</Text>
                         <br />
                         <Divider style={{ backgroundColor: "rgb(240,240,240)" }} />
                     </Item>

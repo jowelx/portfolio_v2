@@ -37,11 +37,11 @@ const Hero: NextPage<Props> = ({ }) => {
     >
         <Item xs={11} lg={8}>
             <TittleStatic sx={{ textAlign: { xs: 'center', lg: 'left' }, fontSize: { xs: 40, sm: 100, md: 100 } }}>
-                I´m a
+                Soy un
             </TittleStatic>
             <SlideWords />
             <TittleStatic sx={{ textAlign: { xs: 'center', lg: 'left' }, fontSize: { xs: 40, sm: 100, md: 100 } }}>
-                Developer
+                Desarrollador
             </TittleStatic>
             <Text sx={{
                 width: { xs: '100%', lg: '80%' },
