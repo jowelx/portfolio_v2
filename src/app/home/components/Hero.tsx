@@ -41,14 +41,14 @@ const Hero: NextPage<Props> = ({ }) => {
             </TittleStatic>
             <SlideWords />
             <TittleStatic sx={{ textAlign: { xs: 'center', lg: 'left' }, fontSize: { xs: 40, sm: 100, md: 100 } }}>
-                Desarrollador
+                Developer
             </TittleStatic>
             <Text sx={{
                 width: { xs: '100%', lg: '80%' },
                 textAlign: { xs: 'center', lg: 'left' },
                 fontSize: { xs: 13, sm: 20, md: 20 }
             }}>
-                Soy un <strong style={{ color: "rgb(80,220,245)" }}>desarrollador apasionado</strong> , amante de los <strong style={{ color: "rgb(205,250,125)" }}>videojuegos</strong> ,con experiencia en la creación de productos digitales emocionantes tanto para la web como para dispositivos móviles.
+                Soy un <strong style={{ color: "rgb(80,220,245)" }}>ingeniero de software </strong>apasionado , amante de los <strong style={{ color: "rgb(205,250,125)" }}>videojuegos</strong> ,con experiencia en la creación de productos digitales emocionantes tanto para la web como para dispositivos móviles.
             </Text>
             <br />
             <Box sx={{ justifyContent: { xs: 'center', lg: "flex-start" } }} style={{ display: 'flex', alignItems: 'center' }}>

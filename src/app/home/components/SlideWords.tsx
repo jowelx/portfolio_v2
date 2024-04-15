@@ -7,7 +7,7 @@ interface Prop {
 }
 const words = ["Web",
   // "3D Art",
-  "Movil", "Full Stack"
+  "Mobile", "Full Stack"
 ];
 
 const WordsContainer = styled(motion.div)`
