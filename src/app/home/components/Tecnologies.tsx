@@ -67,8 +67,8 @@ const Tecnologies: NextPage<Props> = ({ }) => {
                     </Item>
                     <Item xs={12}>
                         {show ? <Box
-                            sx={{ height: { xs: 237, sm: 180, lg: 'auto' } }}
-                            style={{ overflow: 'auto', borderRadius: 8, position: "relative", paddingRight: 10 }}>
+                            sx={{ height: { xs: 237, sm: 180, lg: 260 } }}
+                            style={{ overflow: 'auto', borderRadius: 8, position: "relative", paddingRight: 10, }}>
                             {TecnologiesData.map((item, index) => {
                                 return (
                                     <motion.div
